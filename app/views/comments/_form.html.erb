@@ -1,0 +1,13 @@
+<%= form_for Comment.new(:todo_item_id => todo_item.id), :remote => true do |f| %>
+
+<%= f.hidden_field :todo_item_id %> 
+
+<div class="field">
+<%= f.text_area :body %>
+</div> 
+
+<div class="field">
+<%= f.submit %>
+</div>
+
+<% end %> 

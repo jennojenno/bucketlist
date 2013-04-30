@@ -12,7 +12,8 @@ Bucketlist::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+resources :comments
+resources :todo_items, :only => [:index, :show]
   # Sample resource route with options:
   #   resources :products do
   #     member do

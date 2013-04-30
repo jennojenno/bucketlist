@@ -1,0 +1,27 @@
+<h1 color="red">Listing comments</h1>
+
+<div style="width: 800px;">
+<div style="float:left">
+<% @comments.each do |comment| %>
+  
+    <b><h2 style="color:#E01B6A"><%= comment.body %></b></h2>
+
+    <BR>
+
+    <center>
+    <%= link_to 'Show', comment %>
+    <%= link_to 'Edit', edit_comment_path(comment) %>
+    <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></center>
+
+ 
+<% end %>
+
+</div>
+</div>
+
+
+
+<br />
+
+<font size="3"><center>
+<%= link_to 'New comment', new_comment_path %></center></font>
